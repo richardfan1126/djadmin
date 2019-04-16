@@ -10,7 +10,7 @@ from django.apps import apps
 from django.conf import settings, global_settings
 from django.contrib.admin.models import LogEntry
 from django.contrib.contenttypes.models import ContentType
-from django.core.urlresolvers import Resolver404, resolve, reverse, NoReverseMatch
+from django.urls import Resolver404, resolve, reverse, NoReverseMatch
 from django.db.models import Q
 from django.template import TemplateSyntaxError
 from django.templatetags.i18n import GetAvailableLanguagesNode
@@ -25,7 +25,7 @@ register = template.Library()
 CL_VALUE_RE = re.compile('value="([\\d-]+)"')
 
 if django.VERSION >= (1, 9):
-    from django.core.urlresolvers import translate_url
+    from django.urls import translate_url
 else:
     from django.utils.six.moves.urllib.parse import urlsplit, urlunsplit
 

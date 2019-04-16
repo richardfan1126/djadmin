@@ -5,7 +5,7 @@ from django.conf import settings
 from django.contrib.admin.templatetags.admin_list import (result_headers,
                                                           result_hidden_fields,
                                                           results)
-from django.core.urlresolvers import reverse
+from django.urls import reverse
 from django.template import Library
 
 from .base import AdminReadonlyField, Inline
