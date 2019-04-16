@@ -31,7 +31,7 @@ def get_admin_site():
 site = get_admin_site()
 
 
-@register.assignment_tag
+@register.simple_tag
 def fieldset_layout(adminform, inline_admin_formsets):
     layout = getattr(adminform.model_admin, 'layout', None)
     if layout is not None:
