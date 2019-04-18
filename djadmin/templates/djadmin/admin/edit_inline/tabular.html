@@ -13,7 +13,7 @@
             <tbody data-formset-body>
             {% for inline_admin_form in element.inline %}
                 {% if inline_admin_form.form.prefix ==  element.inline.formset.empty_form.prefix %}
-                    <script type="form-template" data-formset-empty-form>{% endif %}
+                    <!-- {% endif %}
 
             <tr data-formset-form class="{% cycle 'white' ' grey lighten-4' %}">
                 {% part inline_admin_form.form hidden %}
@@ -60,7 +60,7 @@
                 {% endif %}
             </tr>
 
-            {% if inline_admin_form.form.prefix ==  element.inline.formset.empty_form.prefix %}</script>{% endif %}
+            {% if inline_admin_form.form.prefix ==  element.inline.formset.empty_form.prefix %}-->{% endif %}
 
             {% endfor %}
             </tbody>
